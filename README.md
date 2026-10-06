@@ -29,7 +29,7 @@ pi install npm:pi-response-timing
 从 Git 安装：
 
 ```bash
-pi install git:github.com/<your-name>/pi-response-timing
+pi install git:github.com/liuxiu34/pi-response-timing
 ```
 
 本地路径安装（开发时）：
@@ -83,7 +83,7 @@ Pi 官网的插件页 **https://pi.dev/packages** 是**自动从 npm 索引**的
 
 ```bash
 # 1. 先确保仓库已推到 GitHub（repository/homepage 字段要和它一致）
-git remote add origin https://github.com/<你的用户名>/pi-response-timing.git
+git remote add origin https://github.com/liuxiu34/pi-response-timing.git
 git push -u origin main
 
 # 2. 登录 npm（首次需要去 npmjs.com 注册并验证邮箱）
@@ -103,8 +103,8 @@ npm publish
 {
   "pi": {
     "extensions": ["./extensions/response-timing.ts"],
-    "image": "https://raw.githubusercontent.com/<你>/pi-response-timing/main/assets/screenshot.png",
-    "video": "https://raw.githubusercontent.com/<你>/pi-response-timing/main/assets/demo.mp4"
+    "image": "https://raw.githubusercontent.com/liuxiu34/pi-response-timing/main/assets/screenshot.png",
+    "video": "https://raw.githubusercontent.com/liuxiu34/pi-response-timing/main/assets/demo.mp4"
   }
 }
 ```

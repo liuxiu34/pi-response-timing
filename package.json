@@ -1,6 +1,6 @@
 {
   "name": "pi-response-timing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pi extension: per-prompt time to first output (TTFT) and total response time in the footer.",
   "keywords": [
     "pi-package",
