@@ -6,12 +6,27 @@
     "pi-package",
     "pi-extension",
     "pi",
+    "pi-coding-agent",
+    "coding-agent",
     "timing",
     "ttft",
-    "latency"
+    "latency",
+    "response-time",
+    "performance"
   ],
   "license": "MIT",
   "type": "module",
+  "author": {
+    "name": "liuxiu34"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuxiu34/pi-response-timing.git"
+  },
+  "homepage": "https://github.com/liuxiu34/pi-response-timing#readme",
+  "bugs": {
+    "url": "https://github.com/liuxiu34/pi-response-timing/issues"
+  },
   "files": [
     "extensions",
     "README.md",

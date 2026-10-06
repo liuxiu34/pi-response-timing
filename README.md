@@ -67,6 +67,52 @@ pi -e ./pi-response-timing
 
 时间使用 `performance.now()`（单调时钟），不受系统时间调整影响。
 
+## 发布到 Pi 官网（Package Gallery）
+
+Pi 官网的插件页 **https://pi.dev/packages** 是**自动从 npm 索引**的，不需要单独投稿。
+
+### 收录条件
+
+1. 包已**公开发布到 npm**；
+2. `package.json` 的 `keywords` 里包含 **`pi-package`**；
+3. 有有效的资源声明：`pi` 清单（本包已有）或约定的 `extensions/`、`skills/`、`prompts/`、`themes/` 目录。
+
+满足后会被自动抓取并按类型（extension / skill / theme / prompt）归类展示。
+
+### 发布步骤
+
+```bash
+# 1. 先确保仓库已推到 GitHub（repository/homepage 字段要和它一致）
+git remote add origin https://github.com/<你的用户名>/pi-response-timing.git
+git push -u origin main
+
+# 2. 登录 npm（首次需要去 npmjs.com 注册并验证邮箱）
+npm login
+
+# 3. 发布
+npm publish
+```
+
+版本更新时改 `version` 再 `npm publish` 即可。
+
+### 加预览图 / 视频（可选）
+
+在 `package.json` 的 `pi` 字段里加公开可访问的 URL（推荐用 GitHub raw 链接）：
+
+```json
+{
+  "pi": {
+    "extensions": ["./extensions/response-timing.ts"],
+    "image": "https://raw.githubusercontent.com/<你>/pi-response-timing/main/assets/screenshot.png",
+    "video": "https://raw.githubusercontent.com/<你>/pi-response-timing/main/assets/demo.mp4"
+  }
+}
+```
+
+### 生效时间
+
+npm 发布成功后，官网索引有缓存，通常**几小时内**出现；可以直接在官网搜索包名确认。
+
 ## 开发
 
 扩展是纯 TypeScript，Pi 通过 jiti 直接加载，无需编译：
